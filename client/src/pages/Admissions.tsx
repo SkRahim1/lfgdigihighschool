@@ -61,10 +61,10 @@ Grade: ${grade}`;
 
   return (
     <div className="bg-slate-50 text-slate-800">
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 py-16 text-white text-center border-b border-slate-800 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_-20%,rgba(120,119,198,0.15),rgba(255,255,255,0))] pointer-events-none" />
-        <h1 className="text-4xl font-extrabold mb-4 tracking-tight relative z-10">Admissions Open 2026-27</h1>
-        <p className="text-slate-300 max-w-2xl mx-auto px-4 text-sm sm:text-base relative z-10 font-medium">
+      <section className="bg-gradient-to-br from-white via-slate-50 to-indigo-50/50 py-16 text-slate-800 text-center border-b border-slate-100 relative">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_-20%,rgba(120,119,198,0.05),rgba(255,255,255,0))] pointer-events-none" />
+        <h1 className="text-4xl font-extrabold mb-4 tracking-tight relative z-10 text-slate-900">Admissions Open 2026-27</h1>
+        <p className="text-slate-600 max-w-2xl mx-auto px-4 text-sm sm:text-base relative z-10 font-medium">
           Your child's future starts here. Follow our simple 4-step process to join the Lfg Digi High School family.
         </p>
       </section>
@@ -90,10 +90,10 @@ Grade: ${grade}`;
       </section>
 
       {/* Online Inquiry Form */}
-      <section id="inquiry-form" className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
-        <div className="bg-slate-900 border border-slate-800 p-8 sm:p-10 rounded-3xl text-white shadow-2xl relative overflow-hidden max-w-xl w-full">
+      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+        <div className="bg-white border border-slate-200 p-8 sm:p-10 rounded-3xl text-slate-800 shadow-xl relative overflow-hidden max-w-xl w-full">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_-20%,rgba(245,158,11,0.05),transparent)] pointer-events-none" />
-          <h3 className="text-2xl font-bold mb-6 text-center relative z-10">Online Inquiry Form</h3>
+          <h3 className="text-2xl font-bold mb-6 text-center relative z-10 text-slate-900">Online Inquiry Form</h3>
           <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
             <input 
               type="text" 
@@ -101,7 +101,7 @@ Grade: ${grade}`;
               required
               value={parentName}
               onChange={(e) => setParentName(e.target.value)}
-              className="w-full p-4 rounded-xl text-slate-900 bg-white border border-slate-800 outline-none focus:ring-2 focus:ring-school-secondary text-sm" 
+              className="w-full p-4 rounded-xl text-slate-900 bg-white border border-slate-200 outline-none focus:ring-2 focus:ring-slate-900 text-sm" 
             />
             <input 
               type="text" 
@@ -109,14 +109,14 @@ Grade: ${grade}`;
               required
               value={studentName}
               onChange={(e) => setStudentName(e.target.value)}
-              className="w-full p-4 rounded-xl text-slate-900 bg-white border border-slate-800 outline-none focus:ring-2 focus:ring-school-secondary text-sm" 
+              className="w-full p-4 rounded-xl text-slate-900 bg-white border border-slate-200 outline-none focus:ring-2 focus:ring-slate-900 text-sm" 
             />
             <input 
               type="email" 
               placeholder="Email Address" 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-4 rounded-xl text-slate-900 bg-white border border-slate-800 outline-none focus:ring-2 focus:ring-school-secondary text-sm" 
+              className="w-full p-4 rounded-xl text-slate-900 bg-white border border-slate-200 outline-none focus:ring-2 focus:ring-slate-900 text-sm" 
             />
             <input 
               type="tel" 
@@ -124,12 +124,12 @@ Grade: ${grade}`;
               required
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="w-full p-4 rounded-xl text-slate-900 bg-white border border-slate-800 outline-none focus:ring-2 focus:ring-school-secondary text-sm" 
+              className="w-full p-4 rounded-xl text-slate-900 bg-white border border-slate-200 outline-none focus:ring-2 focus:ring-slate-900 text-sm" 
             />
             <select 
               value={grade}
               onChange={(e) => setGrade(e.target.value)}
-              className="w-full p-4 rounded-xl text-slate-800 bg-white border border-slate-800 outline-none focus:ring-2 focus:ring-school-secondary text-sm animate-in fade-in"
+              className="w-full p-4 rounded-xl text-slate-800 bg-white border border-slate-200 outline-none focus:ring-2 focus:ring-slate-900 text-sm animate-in fade-in"
             >
               <option value="Select Grade">Select Grade</option>
               <option value="Nursery">Nursery</option>
@@ -148,7 +148,7 @@ Grade: ${grade}`;
             </select>
             <button 
               type="submit"
-              className="w-full bg-school-secondary hover:bg-amber-500 text-slate-950 py-4 rounded-xl font-extrabold text-lg hover:scale-[1.01] transition-transform shadow-lg shadow-school-secondary/10 cursor-pointer"
+              className="w-full bg-slate-900 hover:bg-slate-800 text-white py-4 rounded-xl font-extrabold text-lg hover:scale-[1.01] transition-transform shadow-lg shadow-slate-950/10 cursor-pointer"
             >
               Submit Inquiry via WhatsApp
             </button>

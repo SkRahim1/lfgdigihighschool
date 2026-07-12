@@ -17,10 +17,10 @@ const Academics = () => {
 
   return (
     <div className="bg-slate-50 text-slate-800">
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 py-16 text-white text-center border-b border-slate-800 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_-20%,rgba(120,119,198,0.15),rgba(255,255,255,0))] pointer-events-none" />
-        <h1 className="text-4xl font-extrabold mb-4 tracking-tight relative z-10">Academics</h1>
-        <p className="text-slate-300 max-w-2xl mx-auto px-4 text-sm sm:text-base relative z-10">
+      <section className="bg-gradient-to-br from-white via-slate-50 to-indigo-50/50 py-16 text-slate-800 text-center border-b border-slate-100 relative">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_-20%,rgba(120,119,198,0.05),rgba(255,255,255,0))] pointer-events-none" />
+        <h1 className="text-4xl font-extrabold mb-4 tracking-tight relative z-10 text-slate-900">Academics</h1>
+        <p className="text-slate-600 max-w-2xl mx-auto px-4 text-sm sm:text-base relative z-10">
           A comprehensive and future-ready curriculum designed for the digital age.
         </p>
       </section>
@@ -63,33 +63,33 @@ const Academics = () => {
 
       {/* Calendar Preview */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-slate-950 to-indigo-950 border border-slate-800 rounded-3xl p-8 lg:p-12 text-white flex flex-col lg:flex-row items-center gap-12 shadow-2xl relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_120%,rgba(245,158,11,0.08),transparent)] pointer-events-none" />
+        <div className="bg-gradient-to-r from-indigo-50 to-slate-100 border border-slate-200 rounded-3xl p-8 lg:p-12 text-slate-800 flex flex-col lg:flex-row items-center gap-12 shadow-sm relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_120%,rgba(99,102,241,0.05),transparent)] pointer-events-none" />
           <div className="flex-grow text-center lg:text-left relative z-10">
-            <h2 className="text-3xl font-extrabold mb-4 tracking-tight">Academic Calendar 2026-27</h2>
-            <p className="text-slate-300 mb-8 max-w-lg text-sm sm:text-base">
+            <h2 className="text-3xl font-extrabold mb-4 tracking-tight text-slate-900">Academic Calendar 2026-27</h2>
+            <p className="text-slate-600 mb-8 max-w-lg text-sm sm:text-base">
               Download our full academic calendar to stay updated with exams, holidays, and school events.
             </p>
-            <button className="bg-school-secondary hover:bg-amber-500 text-slate-950 px-8 py-4 rounded-full font-extrabold text-lg hover:scale-[1.03] active:scale-95 transition-all shadow-lg shadow-school-secondary/10">
+            <button className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-full font-extrabold text-lg hover:scale-[1.03] active:scale-95 transition-all shadow-lg cursor-pointer">
               Download PDF (Mock)
             </button>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-md relative z-10 shrink-0">
-            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-              <p className="text-school-secondary font-bold text-2xl">June 17</p>
-              <p className="text-sm text-slate-300 font-semibold">Session Begins</p>
+            <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm">
+              <p className="text-amber-500 font-bold text-2xl">June 17</p>
+              <p className="text-sm text-slate-600 font-semibold">Session Begins</p>
             </div>
-            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-              <p className="text-school-secondary font-bold text-2xl">Aug 15</p>
-              <p className="text-sm text-slate-300 font-semibold">Independence Day</p>
+            <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm">
+              <p className="text-amber-500 font-bold text-2xl">Aug 15</p>
+              <p className="text-sm text-slate-600 font-semibold">Independence Day</p>
             </div>
-            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-              <p className="text-school-secondary font-bold text-2xl">Oct 10-20</p>
-              <p className="text-sm text-slate-300 font-semibold">Dussera Holidays</p>
+            <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm">
+              <p className="text-amber-500 font-bold text-2xl">Oct 10-20</p>
+              <p className="text-sm text-slate-600 font-semibold">Dussera Holidays</p>
             </div>
-            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-              <p className="text-school-secondary font-bold text-2xl">Dec 24-Jan 2</p>
-              <p className="text-sm text-slate-300 font-semibold">Winter Break</p>
+            <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm">
+              <p className="text-amber-500 font-bold text-2xl">Dec 24-Jan 2</p>
+              <p className="text-sm text-slate-600 font-semibold">Winter Break</p>
             </div>
           </div>
         </div>

@@ -4,10 +4,10 @@ const About = () => {
   return (
     <div className="bg-slate-50 text-slate-800">
       {/* Header */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 py-16 text-white text-center border-b border-slate-800 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_-20%,rgba(120,119,198,0.15),rgba(255,255,255,0))] pointer-events-none" />
-        <h1 className="text-4xl font-extrabold mb-4 tracking-tight relative z-10">About Our School</h1>
-        <p className="text-slate-300 max-w-2xl mx-auto px-4 text-sm sm:text-base relative z-10">
+      <section className="bg-gradient-to-br from-white via-slate-50 to-indigo-50/50 py-16 text-slate-800 text-center border-b border-slate-100 relative">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_-20%,rgba(120,119,198,0.05),rgba(255,255,255,0))] pointer-events-none" />
+        <h1 className="text-4xl font-extrabold mb-4 tracking-tight relative z-10 text-slate-900">About Our School</h1>
+        <p className="text-slate-600 max-w-2xl mx-auto px-4 text-sm sm:text-base relative z-10">
           Founded on the principles of excellence and innovation, Lfg Digi High School has been a beacon of learning in Hyderabad.
         </p>
       </section>

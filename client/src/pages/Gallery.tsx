@@ -16,11 +16,11 @@ const Gallery = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      <section className="bg-school-primary py-16 text-white text-center">
-        <h1 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
+      <section className="bg-gradient-to-br from-white via-slate-50 to-indigo-50/50 py-16 text-slate-800 text-center border-b border-slate-100">
+        <h1 className="text-4xl font-extrabold mb-4 flex items-center justify-center gap-3 text-slate-900">
           <ImageIcon /> School Gallery
         </h1>
-        <p className="text-blue-100 max-w-2xl mx-auto px-4">Capturing the vibrant life and milestones of Lfg Digi High School.</p>
+        <p className="text-slate-600 max-w-2xl mx-auto px-4">Capturing the vibrant life and milestones of Lfg Digi High School.</p>
       </section>
 
       {/* Filter */}
@@ -30,8 +30,8 @@ const Gallery = () => {
             <button
               key={cat}
               onClick={() => setCategory(cat)}
-              className={`px-6 py-2 rounded-full font-bold transition-all ${
-                category === cat ? 'bg-school-secondary text-school-primary shadow-md' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              className={`px-6 py-2 rounded-full font-bold transition-all cursor-pointer ${
+                category === cat ? 'bg-school-secondary text-slate-950 shadow-md' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               }`}
             >
               {cat}
@@ -52,7 +52,7 @@ const Gallery = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
-                  <span className="bg-school-secondary text-school-primary px-3 py-1 rounded-full text-xs font-bold w-fit mb-2">
+                  <span className="bg-school-secondary text-slate-950 px-3 py-1 rounded-full text-xs font-bold w-fit mb-2">
                     {photo.category}
                   </span>
                   <h3 className="text-xl font-bold">{photo.title}</h3>
