@@ -16,7 +16,7 @@ const Admissions = () => {
   const [grade, setGrade] = useState('Select Grade');
 
   useEffect(() => {
-    if (window.location.hash === '#inquiry-form') {
+    if (window.location.hash.endsWith('#inquiry-form')) {
       const element = document.getElementById('inquiry-form');
       if (element) {
         const timer = setTimeout(() => {

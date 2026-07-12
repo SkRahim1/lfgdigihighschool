@@ -4,7 +4,7 @@ import { Image as ImageIcon, Search } from 'lucide-react';
 const Gallery = () => {
   const [category, setCategory] = useState('All');
   const photos = [
-    { id: 1, title: 'Lfg Digi High School Campus', url: '/lfg_school_campus.png', category: 'Campus' },
+    { id: 1, title: 'Lfg Digi High School Campus', url: `${import.meta.env.BASE_URL}lfg_school_campus.png`, category: 'Campus' },
     { id: 2, title: 'Interactive Science Lab', url: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=800', category: 'Labs' },
     { id: 3, title: 'Annual Basketball Tournament', url: 'https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=800', category: 'Sports' },
     { id: 4, title: 'Digital Smart Classroom', url: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800', category: 'Campus' },

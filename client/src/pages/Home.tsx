@@ -41,7 +41,7 @@ const Home = () => {
           <div className="flex-1 w-full max-w-md lg:max-w-none relative">
             <div className="w-full h-72 sm:h-96 bg-slate-800 rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-700/50 hover:scale-[1.01] transition-transform duration-500">
               <img 
-                src="/lfg_school_campus.png" 
+                src={`${import.meta.env.BASE_URL}lfg_school_campus.png`} 
                 alt="School Campus" 
                 className="w-full h-full object-cover"
               />
