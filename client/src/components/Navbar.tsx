@@ -24,7 +24,7 @@ const Navbar = () => {
               <img 
                 src={`${import.meta.env.BASE_URL}logo.jpg`} 
                 alt="Lfg Digi High School Logo" 
-                className="h-12 w-12 object-contain rounded-xl shadow-md border border-slate-100 group-hover:scale-105 transition-transform" 
+                className="h-12 w-12 object-cover rounded-full shadow-md border border-slate-100 group-hover:scale-105 transition-transform" 
               />
               <span className="font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-slate-950 transition-colors">
                 Lfg Digi High School

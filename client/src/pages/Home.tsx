@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, BookOpen, Users, Trophy, Computer, Bell } from 'lucide-react';
+import { ArrowRight, BookOpen, Users, Trophy, MessageSquare, Bell } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -14,7 +14,6 @@ const Home = () => {
     `${import.meta.env.BASE_URL}image(3).jpg`,
     `${import.meta.env.BASE_URL}images (1).jpg`,
     `${import.meta.env.BASE_URL}images (2).jpg`,
-    `${import.meta.env.BASE_URL}images (4).jpg`,
     `${import.meta.env.BASE_URL}images (5).jpg`
   ];
 
@@ -40,7 +39,7 @@ const Home = () => {
               Welcome to <span className="text-amber-500">Lfg Digi High School</span>
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0">
-              Nurturing minds, fostering innovation, and building leaders of tomorrow in Vasanth Nagar Colony, Nizampet. Join us in our journey of excellence.
+              Nurturing minds, fostering innovation, and building leaders of tomorrow in Rajiv Gruhakalpa, Vasanth Nagar Colony, Nizampet. Join us in our journey of excellence.
             </p>
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
               <Link 
@@ -113,31 +112,31 @@ const Home = () => {
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Why Choose Lfg Digi High School?</h2>
-          <p className="text-slate-500 max-w-2xl mx-auto mb-16">We provide a high-caliber digital education combined with structural guidelines to prepare students for the future.</p>
+          <p className="text-slate-500 max-w-2xl mx-auto mb-16">We provide high-quality holistic learning combined with structural values to prepare students for academic and life success.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <FeatureCard 
-              icon={<Computer size={32} />}
+              icon={<MessageSquare size={32} />}
               iconBg="bg-blue-50 text-blue-600"
-              title="Smart Classrooms"
-              description="Fully digital learning environments with interactive whiteboards and modern tools."
-            />
-            <FeatureCard 
-              icon={<BookOpen size={32} />}
-              iconBg="bg-emerald-50 text-emerald-600"
-              title="Modern Library"
-              description="Extensive collection of books and digital resources to spark curiosity."
-            />
-            <FeatureCard 
-              icon={<Trophy size={32} />}
-              iconBg="bg-amber-50 text-amber-600"
-              title="Sports Excellence"
-              description="Professional coaching and facilities for overall physical development."
+              title="Communicative English"
+              description="Focused training in verbal fluency, active listening, and formal writing to build confident communicators."
             />
             <FeatureCard 
               icon={<Users size={32} />}
+              iconBg="bg-emerald-50 text-emerald-600"
+              title="Cultural Events"
+              description="Vibrant events and creative competitions to nurture arts, collaboration, and self-expression."
+            />
+            <FeatureCard 
+              icon={<BookOpen size={32} />}
+              iconBg="bg-amber-50 text-amber-600"
+              title="Academic Excellence"
+              description="Exceptional scholastic coaching with a focus on core concepts and outstanding results."
+            />
+            <FeatureCard 
+              icon={<Trophy size={32} />}
               iconBg="bg-rose-50 text-rose-600"
-              title="Expert Faculty"
-              description="Experienced and passionate educators dedicated to student success."
+              title="Sports Excellence"
+              description="Professional physical training and sports activities to maintain peak health and fitness."
             />
           </div>
         </div>

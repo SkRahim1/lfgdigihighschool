@@ -45,6 +45,16 @@ const Footer = () => {
                 <span>info@lfgdigihigh.edu.in</span>
               </li>
             </ul>
+            <div className="mt-4">
+              <a 
+                href="https://maps.app.goo.gl/KiJwCBDDaHFaczYW8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-slate-950 px-4 py-2.5 rounded-xl text-xs font-bold transition-all shadow-md shadow-amber-500/10 cursor-pointer"
+              >
+                <MapPin size={14} /> View on Google Maps
+              </a>
+            </div>
           </div>
 
           {/* Social Icons */}
