@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <div className="overflow-hidden bg-slate-50 text-slate-800">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-white via-slate-50 to-indigo-50/40 py-20 lg:py-32 text-slate-800 border-b border-slate-200">
+      <section className="relative bg-gradient-to-br from-white via-slate-50 to-indigo-50/40 pt-10 pb-16 lg:pt-12 lg:pb-24 text-slate-800 border-b border-slate-200">
         {/* Background Mesh Overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.05),rgba(255,255,255,0))] pointer-events-none" />
         
@@ -45,15 +45,9 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
               <Link 
                 to="/admissions#inquiry-form" 
-                className="bg-school-secondary hover:bg-amber-500 text-slate-950 px-8 py-4 rounded-full font-extrabold text-lg hover:scale-[1.03] active:scale-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-school-secondary/15 cursor-pointer"
+                className="bg-school-secondary hover:bg-amber-500 text-slate-950 px-8 py-4 rounded-full font-extrabold text-lg hover:scale-[1.03] active:scale-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-school-secondary/15 cursor-pointer w-full sm:w-fit"
               >
                 Inquire About Admission <ArrowRight size={20} />
-              </Link>
-              <Link 
-                to="/about" 
-                className="bg-slate-100 border border-slate-200 text-slate-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-200/80 active:scale-95 transition-all flex items-center justify-center cursor-pointer"
-              >
-                Learn More
               </Link>
             </div>
           </div>

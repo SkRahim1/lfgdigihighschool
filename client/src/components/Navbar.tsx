@@ -47,7 +47,7 @@ const Navbar = () => {
 
       {/* Responsive Dropdown Menu */}
       {isOpen && (
-        <div className="bg-white border-b border-slate-200 pb-6 px-4 space-y-2 animate-in fade-in slide-in-from-top-2 duration-300 shadow-md">
+        <div className="absolute top-full left-0 right-0 bg-white border-b border-slate-200 pb-6 px-4 space-y-2 animate-in fade-in slide-in-from-top-2 duration-300 shadow-lg z-50">
           <div className="max-w-7xl mx-auto space-y-1">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
