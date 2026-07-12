@@ -82,8 +82,19 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-slate-200 text-center text-slate-400 text-xs">
+        <div className="mt-16 pt-8 border-t border-slate-200 text-center text-slate-500 text-xs flex flex-col sm:flex-row justify-between items-center gap-4">
           <p>&copy; {new Date().getFullYear()} Lfg Digi High School. All rights reserved.</p>
+          <p>
+            Developed by{' '}
+            <a 
+              href="https://renvixteach.in" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-slate-500 hover:text-amber-600 font-bold transition-colors cursor-pointer"
+            >
+              Renvix Technologies
+            </a>
+          </p>
         </div>
       </div>
     </footer>
