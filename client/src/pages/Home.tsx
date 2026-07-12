@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { ArrowRight, BookOpen, Users, Trophy, Computer, Bell } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -7,6 +8,24 @@ const Home = () => {
     { id: 2, title: 'Independence Day Prep Begins', date: new Date(Date.now() - 86400000 * 2).toISOString(), description: 'Preparations for the grand Independence Day celebrations have started on the campus.' },
     { id: 3, title: 'Academic Session 2026-27 Commences', date: new Date(Date.now() - 86400000 * 9).toISOString(), description: 'Lfg Digi High School welcomes all students to the new academic term starting today.' }
   ];
+
+  const slides = [
+    `${import.meta.env.BASE_URL}lfg_school_campus.png`,
+    `${import.meta.env.BASE_URL}image(3).jpg`,
+    `${import.meta.env.BASE_URL}images (1).jpg`,
+    `${import.meta.env.BASE_URL}images (2).jpg`,
+    `${import.meta.env.BASE_URL}images (4).jpg`,
+    `${import.meta.env.BASE_URL}images (5).jpg`
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000); // Change image every 4 seconds
+    return () => clearInterval(timer);
+  }, [slides.length]);
 
   return (
     <div className="overflow-hidden bg-slate-50 text-slate-800">
@@ -38,19 +57,40 @@ const Home = () => {
               </Link>
             </div>
           </div>
+          
+          {/* Fading Image Slideshow */}
           <div className="flex-1 w-full max-w-md lg:max-w-none relative">
-            <div className="w-full h-72 sm:h-96 bg-slate-100 rounded-3xl overflow-hidden shadow-xl border-4 border-slate-200 hover:scale-[1.01] transition-transform duration-500">
-              <img 
-                src={`${import.meta.env.BASE_URL}lfg_school_campus.png`} 
-                alt="School Campus" 
-                className="w-full h-full object-cover"
-              />
+            <div className="w-full h-72 sm:h-[450px] bg-slate-100 rounded-3xl overflow-hidden shadow-xl border-4 border-slate-200 relative">
+              {slides.map((slide, index) => (
+                <img 
+                  key={index}
+                  src={slide} 
+                  alt={`School Campus Slide ${index + 1}`} 
+                  className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
+                    index === currentSlide ? 'opacity-100 z-10 scale-100' : 'opacity-0 z-0 scale-95'
+                  }`}
+                />
+              ))}
+              
+              {/* Slideshow Dot Indicators */}
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2 bg-slate-950/40 backdrop-blur-sm px-3.5 py-2 rounded-full">
+                {slides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                      index === currentSlide ? 'bg-amber-400 scale-110' : 'bg-white/60 hover:bg-white'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
             {/* Playful floating elements */}
-            <div className="absolute -top-4 -right-4 bg-school-vibrant p-4 rounded-2xl shadow-xl hidden sm:block hover:rotate-6 transition-transform">
+            <div className="absolute -top-4 -right-4 bg-school-vibrant p-4 rounded-2xl shadow-xl hidden sm:block hover:rotate-6 transition-transform z-20">
               <Trophy className="text-white" size={32} />
             </div>
-            <div className="absolute -bottom-4 -left-4 bg-school-accent p-4 rounded-2xl shadow-xl hidden sm:block hover:-rotate-6 transition-transform">
+            <div className="absolute -bottom-4 -left-4 bg-school-accent p-4 rounded-2xl shadow-xl hidden sm:block hover:-rotate-6 transition-transform z-20">
               <BookOpen className="text-white" size={32} />
             </div>
           </div>

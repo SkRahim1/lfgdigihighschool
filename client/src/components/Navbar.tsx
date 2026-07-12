@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { School, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -21,9 +21,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="bg-school-secondary/95 p-2.5 rounded-2xl group-hover:rotate-6 transition-transform shadow-lg shadow-school-secondary/15">
-                <School className="text-slate-950" size={24} />
-              </div>
+              <img 
+                src={`${import.meta.env.BASE_URL}logo.jpg`} 
+                alt="Lfg Digi High School Logo" 
+                className="h-12 w-12 object-contain rounded-xl shadow-md border border-slate-100 group-hover:scale-105 transition-transform" 
+              />
               <span className="font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-slate-950 transition-colors">
                 Lfg Digi High School
               </span>
